@@ -77,13 +77,13 @@ npm run dev
 
 ## 🌐 Live Demo
 
-🔗 [https://your-live-link.com](https://keen-keeper-jet.vercel.app/)  
+🔗 [project-live-link](https://keen-keeper-jet.vercel.app/)  
 
 ---
 
 ## 📦 Repository
 
-🔗 [https://github.com/your-username/keenkeeper](https://github.com/kolyanhabib/keen-keeper)  
+🔗 https://github.com/kolyanhabib/keen-keeper  
 
 ---
 
