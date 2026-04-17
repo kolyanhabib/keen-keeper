@@ -1,14 +1,14 @@
 import { useState } from "react";
 import useFriends from "../../context/useFriends";
 
-
-import callImg from "../../assets/call.png"
-import textImg from "../../assets/text.png"
-import videoImg from "../../assets/video.png"
+import callImg from "../../assets/call.png";
+import textImg from "../../assets/text.png";
+import videoImg from "../../assets/video.png";
 
 const Timeline = () => {
   const { interactions } = useFriends();
   const [filter, setFilter] = useState("All");
+  const [search, setSearch] = useState("");
 
   const getImage = (type) => {
     if (type === "Call") return callImg;
@@ -16,10 +16,13 @@ const Timeline = () => {
     if (type === "Video") return videoImg;
   };
 
-  const filteredData =
-    filter === "All"
-      ? interactions
-      : interactions.filter((item) => item.type === filter);
+
+  const filteredData = interactions.filter((item) => {
+    const matchType = filter === "All" || item.type === filter;
+    const matchSearch = item.name.toLowerCase().includes(search.toLowerCase());
+
+    return matchType && matchSearch;
+  });
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
@@ -27,16 +30,29 @@ const Timeline = () => {
         Timeline
       </h1>
 
-      <select
-        value={filter}
-        onChange={(e) => setFilter(e.target.value)}
-        className="border border-gray-200 outline-none rounded-lg py-2 px-4 text-sm mb-6 cursor-pointer"
-      >
-        <option value="All">All</option>
-        <option value="Call">Call</option>
-        <option value="Text">Text</option>
-        <option value="Video">Video</option>
-      </select>
+      
+      <div className="flex flex-col md:flex-row gap-4 md:items-center md:justify-between mb-6">
+        
+        <select
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+          className="border border-gray-200 outline-none rounded-lg py-2 px-4 text-sm cursor-pointer"
+        >
+          <option value="All">All</option>
+          <option value="Call">Call</option>
+          <option value="Text">Text</option>
+          <option value="Video">Video</option>
+        </select>
+
+      
+        <input
+          type="text"
+          placeholder="Search by friend name..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="border border-gray-200 outline-none rounded-lg py-2 px-4 text-sm w-full md:w-64"
+        />
+      </div>
 
       <div className="space-y-6">
         {filteredData.length === 0 ? (
@@ -51,15 +67,15 @@ const Timeline = () => {
             >
               <img
                 src={getImage(item.type)}
-                alt="item.type"
+                alt={item.type}
                 className="w-7 h-7 object-contain"
               />
 
               <div>
-                <p className="font-medium text-lg text-[#244D3F] ">
+                <p className="font-medium text-lg text-[#244D3F]">
                   {item.type}
                   <span className="text-[16px] text-[#64748B]">
-                    {"   "}
+                    {" "}
                     with {item.name}
                   </span>
                 </p>
