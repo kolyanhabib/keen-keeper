@@ -1,16 +1,98 @@
-# React + Vite
+# 👥 KeenKeeper  
+### ✨ Keep Your Friendships Alive
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18-blue?logo=react" />
+  <img src="https://img.shields.io/badge/Vite-Fast-purple?logo=vite" />
+  <img src="https://img.shields.io/badge/TailwindCSS-Modern-38B2AC?logo=tailwindcss" />
+  <img src="https://img.shields.io/badge/Recharts-Analytics-orange" />
+</p>
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📌 About The Project
 
-## React Compiler
+KeenKeeper is a modern and responsive friendship management web application that helps users stay connected with friends by tracking communication activities like 📞 calls, 💬 texts, and 🎥 video chats.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+It provides a structured way to maintain relationships, visualize interaction history, and ensure no friend is forgotten.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|----------|--------|
+| ⚛️ React.js | Frontend UI |
+| ⚡ Vite | Fast Development |
+| 🎨 Tailwind CSS | Styling & Responsive Design |
+| 🔀 React Router DOM | Routing |
+| 📊 Recharts | Data Visualization |
+| 🔔 React Toastify | Notifications |
+
+---
+
+## 🚀 Key Features
+
+### 👫 Friend Management
+- View all friends in a clean card layout  
+- Track contact status (Overdue / Almost Due / On Track)  
+- See tags, profile info, and relationship goals  
+
+---
+
+### 📜 Interaction Timeline
+- Automatically logs interactions (Call, Text, Video)  
+- Displays date, type, and title  
+- Filter interactions easily  
+
+---
+
+### 📊 Analytics Dashboard
+- Visualize interaction data using Pie Charts  
+- Understand communication patterns  
+- Track engagement across different interaction types  
+
+---
+
+## 📱 Responsive Design
+
+✔ Mobile  
+✔ Tablet  
+✔ Desktop  
+
+Fully optimized for all screen sizes.
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/your-username/keenkeeper.git
+cd keenkeeper
+npm install
+npm run dev
+```
+
+---
+
+## 🌐 Live Demo
+
+🔗 https://your-live-link.com  
+
+---
+
+## 📦 Repository
+
+🔗 https://github.com/your-username/keenkeeper  
+
+---
+
+## ⭐ Final Notes
+
+- Clean UI based on Figma design  
+- Smooth navigation & user experience  
+- Built with modern frontend tools  
+
+---
+
+<p align="center">Made with ❤️ using React & Tailwind</p>
