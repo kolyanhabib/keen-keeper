@@ -67,7 +67,7 @@ Fully optimized for all screen sizes.
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/your-username/keenkeeper.git
+git clone https://github.com/kolyanhabib/keenkeeper.git
 cd keenkeeper
 npm install
 npm run dev
